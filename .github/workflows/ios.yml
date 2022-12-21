@@ -22,8 +22,7 @@ jobs:
         uses: devbotsxyz/carthage-bootstrap@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          platform: iOS
-          use: xcframeworks
+          platform: iOS--use-xcframeworks
       - name: Build
         env:
           scheme: ${{ 'default' }}
