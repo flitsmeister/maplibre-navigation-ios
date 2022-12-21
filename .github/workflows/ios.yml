@@ -19,7 +19,7 @@ jobs:
           echo $default | cat >default
           echo Using default scheme: $default
       - name: "Carthage Bootstrap"
-        - uses: olejnjak/carthage-workaround@v1
+        uses: olejnjak/carthage-workaround@v1
           with:
             action: bootstrap --platform iOS --cache-builds
       - name: Build
