@@ -19,10 +19,9 @@ jobs:
           echo $default | cat >default
           echo Using default scheme: $default
       - name: "Carthage Bootstrap"
-        uses: devbotsxyz/carthage-bootstrap@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          platform: iOS use xcframeworks
+        - uses: olejnjak/carthage-workaround@v1
+          with:
+            action: bootstrap --platform iOS --cache-builds
       - name: Build
         env:
           scheme: ${{ 'default' }}
