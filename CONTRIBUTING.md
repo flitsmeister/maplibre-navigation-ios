@@ -1,4 +1,4 @@
-# Contributing to the Mapbox Navigation SDK for iOS
+# Contributing to the Maplibre Navigation SDK for iOS
 
 ## Reporting an issue
 
