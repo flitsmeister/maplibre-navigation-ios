@@ -15,24 +15,9 @@ jobs:
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][4]")
+          default="All Tests"
           echo $default | cat >default
           echo Using default scheme: $default
-      - name: Carthage Bootstrap
-        uses: devbotsxyz/carthage-bootstrap@v1.0.0
-        with:
-        # GitHub Access Token uses for fetching dependencies.
-        github-token: 
-        # The platforms to build for. One of 'all', 'macOS', 'iOS', 'watchOS', 'tvOS', or comma-separated values of the formers except for 'all'.
-        platform: # optional
-        # Do not use downloaded binaries when possible.
-        no-use-binaries: # optional
-        # Cache the Carthage directory.
-        cache: # optional, default is true
-        # Key under which to cache the Carthage directory. Will be generated if not specified.
-        cache-key: # optional
-        # Print xcodebuild output inline.
-       verbose: # optional
       - name: Build
         env:
           scheme: ${{ 'default' }}
