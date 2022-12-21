@@ -21,7 +21,7 @@ jobs:
       - name: "Carthage Bootstrap"
         uses: olejnjak/carthage-workaround@v1
         with:
-            action: bootstrap --platform iOS --cache-builds
+            action: bootstrap --platform iOS  --use-xcframeworks --cache-builds
       - name: Build
         env:
           scheme: ${{ 'default' }}
