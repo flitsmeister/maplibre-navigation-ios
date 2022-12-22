@@ -15,7 +15,7 @@ jobs:
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
-          default="All Tests"
+          default="MapboxNavigation"
           echo $default | cat >default
           echo Using default scheme: $default
       - name: "Carthage Bootstrap"
