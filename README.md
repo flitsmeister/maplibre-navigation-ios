@@ -1,3 +1,5 @@
+## Moved to https://github.com/maplibre/maplibre-navigation-ios
+
 [![MapLibre Logo](https://github.com/flitsmeister/maplibre-navigation-ios/blob/main/.github/splash-image-ios.png?raw=true)](https://maplibre.org)
 
 The Maplibre Navigation SDK for iOS is built on a fork of the [Mapbox Navigation SDK v0.21](https://github.com/flitsmeister/maplibre-navigation-ios/tree/v0.21.0) which is build on top of the [Mapbox Directions API](https://www.mapbox.com/directions) (v0.23.0) and contains logic needed to get timed navigation instructions.
